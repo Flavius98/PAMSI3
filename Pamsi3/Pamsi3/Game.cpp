@@ -1,4 +1,5 @@
 #include "Game.h"
+
 Game::Game(int size, int matchPoint) : board(size, matchPoint), player1('X'), player2('O'), AIplayer('O') {}
 
 void Game::StartGame(int choice, bool current)
@@ -37,7 +38,8 @@ void Game::StartGame(int choice, bool current)
 			EndGame = false;
 		}
 
-		else if (board.CheckFull() && board.CheckWinnerUltimate() != -1 && board.CheckWinnerUltimate() != 1) {
+		else if (board.CheckFull() && board.CheckWinnerUltimate() != -1 && board.CheckWinnerUltimate() != 1) 
+		{
 			std::cout << "TIE" << std::endl;
 			board.PrintBoard();
 			EndGame = false;

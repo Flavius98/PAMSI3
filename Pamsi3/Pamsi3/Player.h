@@ -2,9 +2,7 @@
 
 #include "Board.h"
 
-class Player
-{
-private:
+class Player{
 	char Sign;
 
 public:
